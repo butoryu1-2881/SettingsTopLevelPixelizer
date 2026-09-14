@@ -29,6 +29,15 @@ android {
         sourceCompatibility JavaVersion.VERSION_11
         targetCompatibility JavaVersion.VERSION_11
     }
+
+}
+
+androidComponents {
+    onVariants(selector().all()) { variant ->
+        variant.outputs.each { output ->
+            output.outputFileName.set(output.versionName.map { "SettingsTopLevelPixelizer-v${it}-${variant.buildType}.apk" })
+        }
+    }
 }
 
 dependencies {
