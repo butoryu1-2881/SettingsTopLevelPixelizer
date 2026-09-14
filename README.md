@@ -1,4 +1,4 @@
-# Settings Order Patcher (Xposed Module)
+# SettingsTopLevelPixelizer (Xposed Module)
 
 [日本語](#日本語) | [English](#english)
 
@@ -33,6 +33,21 @@
 
 ### インストール
 
+#### 方法1: Releases から直接ダウンロード（推奨）
+
+最も簡単な方法です。
+
+1. [Releases](../../releases) ページから最新バージョンの APK をダウンロード
+2. LSPosedマネージャーを開く
+3. 「モジュール」タブ → 「ファイルから追加」をタップ
+4. ダウンロードした APK を選択 → インストール
+5. LSPosedで「設定」（`com.android.settings`）をスコープに追加し、有効化
+6. 設定アプリを再起動
+
+#### 方法2: ソースコードからビルド
+
+開発版をテストしたい場合はこちら。
+
 1. このリポジトリをクローン
    ```bash
    git clone https://github.com/butoryu1-2881/SettingsTopLevelPixelizer.git
@@ -44,7 +59,7 @@
    ./gradlew assembleRelease
    ```
 
-3. LSPosedマネージャーから APK をインストール
+3. 生成されたAPKをインストール
    ```
    app/build/outputs/apk/release/app-release.apk
    ```
@@ -137,6 +152,21 @@ MIT License - 詳細は [LICENSE](LICENSE) を参照
 
 ### Installation
 
+#### Method 1: Download from Releases (Recommended)
+
+The easiest way to install.
+
+1. Download the latest APK from [Releases](../../releases)
+2. Open LSPosed Manager
+3. Go to "Modules" tab → tap "Add from file"
+4. Select the downloaded APK → Install
+5. Add "Settings" (`com.android.settings`) to the module scope in LSPosed and enable it
+6. Restart the Settings app
+
+#### Method 2: Build from Source
+
+If you want to test the development version.
+
 1. Clone this repository
    ```bash
    git clone https://github.com/butoryu1-2881/SettingsTopLevelPixelizer.git
@@ -148,7 +178,7 @@ MIT License - 詳細は [LICENSE](LICENSE) を参照
    ./gradlew assembleRelease
    ```
 
-3. Install via LSPosed Manager
+3. Install the generated APK
    ```
    app/build/outputs/apk/release/app-release.apk
    ```
