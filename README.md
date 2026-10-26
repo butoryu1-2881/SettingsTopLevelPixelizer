@@ -8,11 +8,11 @@
 
 ### 概要
 
-**LineageOS 22.x ～ 23.2専用** の設定アプリで、Googleアカウント項目の表示順序をカスタマイズするXposedモジュールです。
+**LineageOS 22.x ～ 24.0専用** の設定アプリで、Googleアカウント項目の表示順序をカスタマイズするXposedモジュールです。
 
 **RROオーバーレイではなく実行時フックを使用**しているため、クラッシュの心配なく安全に動作します。
 
-> ℹ️ LineageOS 22.2 と LineageOS 23.2 では正常に動作確認済みです。他のLineageOS 22.x～23.x系でも動作する可能性が高いですが、保証いたしません。
+> ℹ️ LineageOS 22.2 と LineageOS 23.2 と LineageOS 24.0 では正常に動作確認済みです。他のLineageOS 22.x～24.x系でも動作する可能性が高いですが、保証いたしません。
 
 ### 機能
 
@@ -23,9 +23,9 @@
 
 ### 対応環境
 
-- **OS**: LineageOS 22.x ～ 23.2
-    - **動作確認済み**: LineageOS 22.2, LineageOS 23.2
-    - **推定対応**: LineageOS 22.x ～ 23.x 系全般（動作保証なし）
+- **OS**: LineageOS 22.x ～ 24.0
+    - **動作確認済み**: LineageOS 22.2, LineageOS 23.2, LineageOS 24.0
+    - **推定対応**: LineageOS 22.x ～ 24.x 系全般（動作保証なし）
 - **フレームワーク**: LSPosed or Xposed派生フレームワーク
 - **API Level**: 93以上のXposed APIサポート
 
@@ -96,7 +96,7 @@ if (ACCOUNT_KEY.equals(key)) {
 - LSPosedマネージャーで本モジュールが有効になっているか確認
 - 設定アプリのキャッシュを削除：`adb shell pm clear com.android.settings`
 - LSPosedのスコープに「設定」が正しくチェックされているか確認
-- LineageOS 22.2 / 23.2 以外のバージョンを使用している場合、設定アプリの内部実装の差異が原因の可能性があります
+- LineageOS 22.2 / 23.2 / 24.0 以外のバージョンを使用している場合、設定アプリの内部実装の差異が原因の可能性があります
 
 **ログを確認する**
 
@@ -127,11 +127,11 @@ MIT License - 詳細は [LICENSE](LICENSE) を参照
 
 ### Overview
 
-**LineageOS 22.x ～ 23.2 exclusive** Xposed module to customize the display order of the Google Account item in the Settings app.
+**LineageOS 22.x ～ 24.0 exclusive** Xposed module to customize the display order of the Google Account item in the Settings app.
 
 **Safe and crash-free** - uses runtime hooking instead of RRO overlay.
 
-> ℹ️ Verified working on LineageOS 22.2 and LineageOS 23.2. Likely compatible with other LineageOS 22.x～23.x versions, but not guaranteed.
+> ℹ️ Verified working on LineageOS 22.2 and LineageOS 23.2 and LineageOS 24.0. Likely compatible with other LineageOS 22.x～24.x versions, but not guaranteed.
 
 ### Features
 
@@ -142,9 +142,9 @@ MIT License - 詳細は [LICENSE](LICENSE) を参照
 
 ### Requirements
 
-- **OS**: LineageOS 22.x ～ 23.2
-    - **Verified**: LineageOS 22.2, LineageOS 23.2
-    - **Estimated compatible**: All LineageOS 22.x～23.x versions (not guaranteed)
+- **OS**: LineageOS 22.x ～ 24.0
+    - **Verified**: LineageOS 22.2, LineageOS 23.2, LineageOS 24.0
+    - **Estimated compatible**: All LineageOS 22.x～24.x versions (not guaranteed)
 - **Framework**: LSPosed or Xposed-based framework
 - **API Level**: Xposed API 93 or higher
 
@@ -215,7 +215,7 @@ if (ACCOUNT_KEY.equals(key)) {
 - Verify the module is enabled in LSPosed Manager
 - Clear Settings app cache: `adb shell pm clear com.android.settings`
 - Confirm "Settings" is checked in the module scope
-- If using a LineageOS version other than 22.2 / 23.2, differences in the Settings app internals may be the cause
+- If using a LineageOS version other than 22.2 / 23.2 / 24.0, differences in the Settings app internals may be the cause
 
 **View logs**
 
